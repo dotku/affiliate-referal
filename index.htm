@@ -24,11 +24,22 @@
       <ul>
         <li><a href="http://open.ecwid.com/3rcqMH">http://open.ecwid.com/3rcqMH</a></li>
       </ul>
-      <h2>Finance</h2>
-      <ul>
-        <li><a href="https://blockfi.com/?ref=a0edff46">https://blockfi.com/?ref=a0edff46</a></li>
-        <li><a href="https://www.kryptex.org/?ref=db93f807">https://www.kryptex.org/?ref=db93f807</a></li>
-      </ul>
+      <section class="section-finance">
+        <h2>Finance</h2>
+        <ul>
+          <li><a href="https://blockfi.com/?ref=a0edff46">https://blockfi.com/?ref=a0edff46</a></li>
+          <li><a href="https://www.kryptex.org/?ref=db93f807">https://www.kryptex.org/?ref=db93f807</a></li>
+        </ul>
+      </section>
     </div>
   </body>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const region = params.get("region"); 
+
+    if (region === "cn") {
+      document.querySelector(".noCN").style.display = "none";
+    }
+  </script>
+      
 </html>
